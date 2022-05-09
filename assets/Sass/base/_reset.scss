@@ -138,8 +138,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: row;
-    border: 2px solid black;
-    @include md {
+    // border: 2px solid black;
+    @include xmd {
       flex-direction: column;
       flex-direction: column-reverse;
     }
@@ -148,49 +148,57 @@ body {
     .description-section-image-container {
       height: fit-content;
       display: flex;
-      // margin-left: 105px;
-      border: 2px solid blue;
+      // border: 2px solid blue;
       flex: 1;
       flex-direction: column;
-      padding-top: 90px;
-      @include md {
+      padding-top: 6%;
+      @include xmd {
         width: 100%;
         text-align: center;
         padding-top: 55px;
       }
-
-      .description-small-title {
-        font-weight: 500;
-        font-size: 18px;
-        color: $dark-red-color;
-      }
-      .description-large-title {
-        font-weight: 700;
-        font-size: 47px;
-        color: $dark-blue-color;
-      }
-      .description-medium-title {
-        font-size: 29px;
-        color: $second-dark-gray-color;
-        margin-top: 15px;
-      }
-      .enroll-now-btn {
-        height: 65px;
-        width: 250px;
-        background-color: $dark-blue-color;
-        border-radius: 50px;
-        border: 1px solid $dark-blue-color;
-        font-size: 24px;
-        color: #fff;
-        // position: absolute;
-        // right: 0px;
-        // bottom: 16px;
-        cursor: pointer;
-        margin-top: 20px;
-        @include md {
-          margin-right: auto;
-          margin-left: auto;
+      .text-wrapper{
+        // border : 2px solid green;
+        .description-small-title {
+          font-weight: 500;
+          font-size: 18px;
+          color: $dark-red-color;
         }
+        .description-large-title {
+          font-weight: 700;
+          font-size: 35px;
+          color: $dark-blue-color;
+        }
+        .description-medium-title {
+          font-size: 29px;
+          color: $second-dark-gray-color;
+          margin-top: 15px;
+          @include md {
+            font-size : 18px
+          }
+        }
+      }
+      
+      .button-wrapper{
+        // border:2px solid red;
+        .enroll-now-btn {
+          height: 65px;
+          width: 250px;
+          background-color: $dark-blue-color;
+          border-radius: 50px;
+          border: 1px solid $dark-blue-color;
+          font-size: 24px;
+          color: #fff;
+          cursor: pointer;
+          margin-top: 20px;
+          @include md {
+            margin-right: auto;
+            margin-left: auto;
+            width: 203px;
+            height: 60px;
+          }
+        }
+
       }
     }
     /* End Left Side Section Styling  */
@@ -198,7 +206,7 @@ body {
     /* Start Right Side Section Styling  */
     .description-section-text-wrapper {
       flex: 1;
-      border: 2px solid red;
+      // border: 2px solid red;
       height: fit-content;
       .description-image {
         width: 100%;
@@ -211,4 +219,388 @@ body {
     }
     /* End Right Side Section Styling  */
   }
+  /* End Description Styling  */
+
+  /* Start Services Section  */
+  .sercices-section-wrapper {
+  position: relative;
+  width: 100%;
+  height: 193px;
+  @include md{
+    height: fit-content;
+  }
+  
+  .services-card-warpper {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.06);
+    border-radius: 26px;
+    top: 80px;
+    background-color: #fff;
+    z-index: 2;
+    padding-right: 2%;
+    @include xl {
+      flex-wrap: wrap;
+      height: fit-content;
+    }
+    @include lg {
+      flex-wrap: wrap;
+      gap:2%;
+      height: fit-content;
+    }
+    @include xmd{
+      height: fit-content;
+      flex-direction: column;
+      justify-content: center;
+      padding: 37px 10%;
+      gap:40px;
+      
+    }
+
+    .service-item {
+      width: 426px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+ 
+      @include xl {
+        max-width:400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include lg {
+        max-width: 48%;
+        height: 140px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+      }
+      @include xmd{
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0px;
+        width:100%;
+        max-width: 100%;
+      }
+      .service-card-icon-picture{
+        display: none;
+        @include lg  {
+          display: block;
+        }
+      }
+      .service-card-icon {
+        height: 82px;
+        width: 42px;
+        margin-top: 14px;
+        background-color: $third-dark-gray-color;
+        border-radius: 50px;
+        @include lg{
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 0px;
+          background-color: transparent;
+          text-align: center;
+          height: fit-content;
+        }
+        @include md{
+          margin-top: 0px;
+        }
+      }
+      .service-card-title {
+        text-align: right;
+        font-weight: 700;
+        font-size: 18px;
+        padding-top: 11px;
+        @include lg {
+          display: none;
+        }
+      }
+      .service-card-description {
+        height: 100%;
+        text-align: right;
+        padding-top: 7px;
+        font-weight: 500;
+        font-size: 18px;
+        width: 245px;
+        @include lg {
+          max-width: 200px;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 21px;
+          text-align: center;
+        }
+      }
+    }
+    
+    /* Start Last Services card Styling */
+    .last-service-item {
+      width: 330px;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      gap:10px;
+      background-color: $blue-sky-color;
+      border-top-left-radius: 26px;
+      border-bottom-left-radius: 26px;
+     
+      @include lg {
+        width: 48%;
+        height: fit-content;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-right: 0;
+        margin-left: 0;
+        border-radius: 11px;
+        padding-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        gap:5%
+      }
+      @include xmd {
+        width: 100%;
+        max-width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        background-color: $dark-blue-color;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-right: 0;
+        margin-left: 0;
+        border-radius: 11px;
+        padding-bottom: 10px;
+      }
+     
+      .line {
+        display: none;
+        @include xmd {
+          display: block;
+          width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 3px;
+        }
+      }
+      .service-card-logo {
+        text-align: center;
+      }
+      .service-logo {
+        height: 79px;
+        object-fit: contain;
+        margin-right: 16px;
+        margin-top: 40px;
+        @include xmd {
+          height: 55px;
+          object-fit: contain;
+          margin-right: 0px;
+          margin-top: 16px;
+          filter: brightness(0) invert(1);
+        }
+      }
+      .last-service-item-description {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        color: $dark-blue-color;
+        padding-left: 12px;
+        @include lg {
+          padding-top: 60px;
+        }
+        @include xmd {
+          text-align: center;
+          font-weight: 500;
+          font-size: 22px;
+          color : white ;
+          padding-top: 0px;
+        }
+      }
+      .last-service-card-title {
+        text-align: right;
+        font-weight: 700;
+        font-size: 18px;
+        @include lg {
+          font-size: 21px;
+        }
+        @include xmd {
+          text-align: center;
+          font-weight: 500;
+          font-size: 22px;
+          color : white
+        }
+      }
+      .last-service-card-description {
+        height: 100%;
+        text-align: right;
+        font-weight: 500;
+        font-size: 18px;
+        width: 224px;
+        padding-top: 12px;
+        @include lg {
+          display: none;
+        }
+        @include xmd {
+          height: 100%;
+          text-align: right;
+          font-weight: 500;
+          font-size: 20px;
+          width: 260px;
+          padding-top: 12px;
+          display: none;
+          color : white
+        }
+      }
+    }
+    /* End Last Services card Styling */
+
+  }
+  }
+  /* End Services Section  */
+
+
+
+
+
+
+
+
+ 
+
 }
+ /* Start About Section Styling */
+ .about-section-wrapper {
+  /* border: 2px solid red; */
+  height: 685px;
+  display: flex;
+  flex-direction: row;
+  @include md {
+    flex-direction: column;
+    margin-top: 884PX;
+
+  }
+
+  /* Start About Section Right Side Styling */
+.about-right-side {
+  /* border: 2px solid green; */
+  height: 100%;
+  width: 56%;
+  text-align: right;
+  background-color: $dark-blue-color;
+  @include md {
+    width: 100%;
+  }
+  .about-description-wrapper {
+    margin-top: 205px;
+    width: 804px;
+    margin-left: auto;
+    margin-right: 0px;
+    .about-small-title {
+      font-weight: 400;
+      font-size: 24px;
+      color: $blue-sky-color;
+    }
+    .about-medium-title {
+      font-weight: 500;
+      font-size: 38px;
+      color: #fff;
+      margin-top: 10px;
+    }
+    .about-description {
+      font-size: 21px;
+      color: #fff;
+      line-height: 43px;
+      margin-top: 14px;
+      font-weight: 300;
+    }
+    .start-now-btn {
+      height: 65px;
+      width: 215px;
+      border-radius: 50px;
+      background-color: $blue-sky-color;
+      border: 1px solid $blue-sky-color;
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 700;
+      margin-top: 60px;
+      cursor: pointer;
+    }
+  }
+}
+/* End  About Section Right Side Styling */
+
+/* Start About Section Left Side Styling */
+.about-left-side {
+  /* border: 2px solid blue; */
+  height: 100%;
+  width: 44%;
+  background-color: #d5032b;
+  position: relative;
+  @include md {
+    width: 100%;
+  }
+  .about-left-side-bg {
+    height: 101%;
+    width: 125%;
+    object-fit: contain;
+    position: absolute;
+    right: 3px;
+  }
+  .first-white-icon {
+    position: absolute;
+    background-color: #ed6378;
+    border-radius: 50%;
+    height: 175px;
+    width: 175px;
+    top: 204px;
+    right: 320px;
+    .second-white-icon {
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      height: 120px;
+      width: 120px;
+      top: 27px;
+      left: 27px;
+    }
+  }
+  
+  
+  .descriptive-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 406px;
+    left: 109px;
+    color: #fff;
+    .descriptive-text-title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 43px;
+    }
+    .descriptive-text-sub-title {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 39px;
+      padding: 0px 28px;
+    }
+  }
+  .ellipses-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 55px;
+    position: absolute;
+    top: 539px;
+    left: 223px;
+    gap: 5px;
+  }
+}
+
+
+/* End About Section Left Side Styling */
+ }
+ /* End About Section Styling */
